@@ -47,26 +47,32 @@
 </head>
 <body>
   <header class="cover"> 
-    <div class="cover-image"></div>
     <div class="cover-content">
       <h1>FICSH</h1>
-      <h1>INTERPROVINCIAL FEDERATION OF SHUAR CENTERS</h1>
+      <p>INTERPROVINCIAL FEDERATION OF SHUAR CENTERS</p>
       <p>PÁGINA OFICIAL / OFFICIAL WEBSITE</p>
-      <a href="transparencia/ESTATUTO DE LA FICSH 2015 ACTUAL VIGENTE.pdf" class="btn btn-primary">ESTATUTOS / STATUTES</a>
-      <a href="transparencia/NOMBRAMIENTO FICSH  ACTUAL125 (1).pdf" class="btn btn-primary">NOMBRAMIENTO / APPOINTMENT</a>  
+    
+      <div class="cover-buttons">
+        <a href="transparencia/ESTATUTO DE LA FICSH 2015 ACTUAL VIGENTE.pdf" class="btn btn-primary">ESTATUTOS / STATUTES</a>
+        <a href="transparencia/NOMBRAMIENTO FICSH  ACTUAL125 (1).pdf" class="btn btn-primary">NOMBRAMIENTO / APPOINTMENT</a>
+      </div>
     </div>  
   </header>
   
   <nav class="navbar navbar-expand-lg navbar-container">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="img/logo-ficsh.png" alt="FICSH Logo" class="navbar-logo" loading="lazy">
+        <img src="img/logo.png" alt="FICSH Logo" class="navbar-logo" loading="lazy">
         <span class="navbar-brand-text">FICSH</span>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Menú">
-        <span class="toggler-icon">☰</span>
-      </button>
+        <button class="navbar-toggler" type="button" 
+          aria-expanded="false" 
+          aria-controls="navbarNav" 
+          aria-label="Menú">
+          <span class="toggler-icon"></span>
+          <span class="toggler-icon"></span>
+          <span class="toggler-icon"></span>
+        </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a class="nav-link" href="index.html" data-lang-es="Inicio" data-lang-en="Home">Inicio</a></li>
@@ -87,15 +93,11 @@
 
   <div class="noticias-container" id="noticias-container">
     <div class="center">
-      <p><br><br>"La FICSH (Federación Interprovincial de Centros Shuar) es la organización que representa hoy a la nacionalidad Shuar en Ecuador.
-        Con determinación, protege sus derechos, territorios y cultura, mientras impulsa proyectos de educación, salud y desarrollo sostenible que fortalecen su identidad.
-        Su labor es esencial para asegurar un futuro de autonomía y prosperidad para el pueblo Shuar, trabajando siempre en unidad con sus comunidades."<br>
-        <br>
-        FICSH (Interprovincial Federation of Shuar Centers) is the organization that today represents the Shuar nationality in Ecuador. 
-        With determination, it protects their rights, territories and culture, while promoting education, health and sustainable development projects that strengthen their identity.
-        Its work is essential to ensure a future of autonomy and prosperity for the Shuar people, always working in unity with their communities."
-      </p>
-    </div>
+      <p>
+      <span class="lang-es">"La FICSH (Federación Interprovincial de Centros Shuar) es la organización que representa hoy a la nacionalidad Shuar en Ecuador. Con determinación, protege sus derechos, territorios y cultura, mientras impulsa proyectos de educación, salud y desarrollo sostenible que fortalecen su identidad. Su labor es esencial para asegurar un futuro de autonomía y prosperidad para el pueblo Shuar, trabajando siempre en unidad con sus comunidades."</span>
+      <span class="lang-divider"></span>
+      <span class="lang-en">"FICSH (Interprovincial Federation of Shuar Centers) is the organization that today represents the Shuar nationality in Ecuador. With determination, it protects their rights, territories and culture, while promoting education, health and sustainable development projects that strengthen their identity. Its work is essential to ensure a future of autonomy and prosperity for the Shuar people, always working in unity with their communities."</span>
+    </p>
 
     <section class="carousel-section">
       <div class="swiper-container">
@@ -113,15 +115,52 @@
       </div>
     </section>
 
-    <a href="noticias.html" class="btn btn-primary">Ver más noticias</a> 
+    <a href="noticias.html" class="btn btn-primary lang-es">Ver más noticias</a>
+  <a href="noticias.html" class="btn btn-primary lang-en">See more news</a>
   </div>
   
   <footer>
-    <div class="container">
-      <p>&copy; 2025 MK System</p>
-      <p>Desarrollado por <a href="https://www.mk-system.com">MK System</a></p>
-      <p>Juan de la Cruz y Soasti, Macas, Ecuador</p>
-      <p>cel: 0985323502 / email: tarjo_cm@hotmail.com</p>
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="img/logo.png" alt="FICSH Logo" class="footer-logo">
+          <span class="footer-brand-text">FICSH</span>
+        </div>
+      
+        <div class="footer-info">
+          <h3>Contacto / Contact</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Juan de la Cruz y Soasti, Macas, Ecuador</p>
+          <p><i class="fas fa-phone"></i> cel: 0985323502</p>
+          <p><i class="fas fa-envelope"></i> email: <a href="mailto:tarjo_cm@hotmail.com">tarjo_cm@hotmail.com</a></p>
+        </div>
+      
+        <div class="footer-links">
+          <h3>Enlaces Rápidos / Quick Links</h3>
+          <ul>
+            <li><a href="index.html" class="lang-es">Inicio</a><a href="index.html" class="lang-en">Home</a></li>
+            <li><a href="nosotros.html" class="lang-es">Nosotros</a><a href="nosotros.html" class="lang-en">FICSH Team</a></li>
+            <li><a href="transparencia.html" class="lang-es">Prosperar</a><a href="transparencia.html" class="lang-en">Thrive</a></li>
+            <li><a href="noticias.html" class="lang-es">Noticias</a><a href="noticias.html" class="lang-en">News</a></li>
+            <li><a href="contacto.html" class="lang-es">Contacto</a><a href="contacto.html" class="lang-en">Contact</a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-legal">
+          <h3>Legal / Legal</h3>
+          <ul>
+            <li><a href="transparencia/ESTATUTO DE LA FICSH 2015 ACTUAL VIGENTE.pdf" class="lang-es">Estatutos</a><a href="transparencia/ESTATUTO DE LA FICSH 2015 ACTUAL VIGENTE.pdf" class="lang-en">Statutes</a></li>
+            <li><a href="transparencia/NOMBRAMIENTO FICSH  ACTUAL125 (1).pdf" class="lang-es">Nombramiento</a><a href="transparencia/NOMBRAMIENTO FICSH  ACTUAL125 (1).pdf" class="lang-en">Appointment</a></li>
+            <li><a href="#" class="lang-es">Política de Privacidad</a><a href="#" class="lang-en">Privacy Policy</a></li>
+            <li><a href="#" class="lang-es">Términos de Uso</a><a href="#" class="lang-en">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="footer-bottom">
+        <p class="lang-es">&copy; 2025 FICSH - Federación Interprovincial de Centros Shuar. Todos los derechos reservados.</p>
+        <p class="lang-en">&copy; 2025 FICSH - Interprovincial Federation of Shuar Centers. All rights reserved.</p>
+        <p>Desarrollado por <a href="https://www.mk-system.com" target="_blank">MK System</a></p>
+      </div>
     </div>
   </footer>
 
@@ -173,6 +212,22 @@
         console.log('Idioma cambiado a:', $(this).val());
       });
     });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const toggler = document.querySelector('.navbar-toggler');
+  const menu = document.getElementById('navbarNav');
+  
+  if (toggler && menu) {
+    toggler.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      menu.classList.toggle('show');
+      this.classList.toggle('expanded');
+      this.setAttribute('aria-expanded', !isExpanded);
+    });
+  }
+});
   </script>
 </body>
 </html>

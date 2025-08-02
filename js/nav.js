@@ -106,3 +106,51 @@ document.addEventListener('DOMContentLoaded', function () {
   initWhatsAppButton();
   initDateSelectors();
 });
+
+// Función para cambiar el idioma de toda la página
+function changeLanguage(lang) {
+  // 1. Cambiar textos de navegación
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.textContent = link.getAttribute(`data-lang-${lang}`);
+  });
+  
+  // 2. Mostrar/ocultar elementos según idioma
+  document.querySelectorAll('.lang-es, .lang-en').forEach(el => {
+    el.style.display = 'none';
+  });
+  
+  document.querySelectorAll(`.lang-${lang}`).forEach(el => {
+    el.style.display = lang === 'es' ? 'inline' : 'block';
+  });
+  
+  // 3. Actualizar botones específicos
+  if (lang === 'es') {
+    document.querySelector('.center .lang-divider').style.display = 'block';
+  } else {
+    document.querySelector('.center .lang-divider').style.display = 'none';
+  }
+  
+  // 4. Guardar preferencia de idioma
+  localStorage.setItem('preferredLanguage', lang);
+}
+
+// Función para inicializar la navegación (actualizada)
+function initNavigation() {
+  // ... (código existente) ...
+  
+  // Selector de idioma
+  const languageSelect = document.getElementById('languageSelect');
+  const preferredLanguage = localStorage.getItem('preferredLanguage') || 'es';
+  
+  if (languageSelect) {
+    // Establecer idioma guardado o predeterminado
+    languageSelect.value = preferredLanguage;
+    changeLanguage(preferredLanguage);
+    
+    languageSelect.addEventListener('change', function() {
+      changeLanguage(this.value);
+    });
+  }
+  
+  // ... (resto del código) ...
+}
