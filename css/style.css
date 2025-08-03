@@ -633,3 +633,186 @@ footer::before {
   }
 }
 
+
+
+
+
+
+
+/* ===== EQUIPO FICSH ===== */
+.team-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+  position: relative;
+}
+
+.team-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #1a3c34, #e6b800, #1a3c34);
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #1a3c34;
+  text-align: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #e6b800;
+}
+
+.section-subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #2e5c4b;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.team-member {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.member-image {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team-member:hover .member-image img {
+  transform: scale(1.05);
+}
+
+.member-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(26, 60, 52, 0.8), transparent);
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-overlay {
+  transform: translateY(0);
+}
+
+.overlay-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+  color: #e6b800;
+}
+
+.member-info {
+  padding: 25px;
+}
+
+.member-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #1a3c34;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.member-info h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #e6b800;
+}
+
+.member-info p {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn-member {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #1a3c34;
+  color: white !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  border: 2px solid #1a3c34;
+}
+
+.btn-member:hover {
+  background-color: #e6b800;
+  color: #1a3c34 !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .team-members {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .member-image {
+    height: 250px;
+  }
+}
+
+/* Estilos para el sistema de idiomas */
+.lang-es, .lang-en {
+  display: none;
+}
+
+.lang-es:first-child, 
+.lang-en:first-child {
+  display: block;
+}
