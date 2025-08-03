@@ -152,5 +152,104 @@ function initNavigation() {
     });
   }
   
-  // ... (resto del código) ...
+  
 }
+
+// news.js
+document.addEventListener('DOMContentLoaded', function() {
+  // Filtrado de noticias
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const newsCards = document.querySelectorAll('.news-card');
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Remover clase active de todos los botones
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      // Agregar clase active al botón clickeado
+      this.classList.add('active');
+      
+      const filter = this.getAttribute('data-filter');
+      
+      // Filtrar noticias
+      newsCards.forEach(card => {
+        if (filter === 'all') {
+          card.style.display = 'flex';
+        } else {
+          const category = card.getAttribute('data-category');
+          if (category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+  
+  // Sistema de "Leer más/menos"
+  const readMoreLinks = document.querySelectorAll('.read-more');
+  
+  readMoreLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const newsCard = this.closest('.news-card');
+      
+      // Si la tarjeta ya está expandida, contraerla
+      if (newsCard.classList.contains('expanded')) {
+        newsCard.classList.remove('expanded');
+      } else {
+        // Contraer todas las demás noticias expandidas
+        document.querySelectorAll('.news-card.expanded').forEach(card => {
+          card.classList.remove('expanded');
+        });
+        // Expandir la noticia actual
+        newsCard.classList.add('expanded');
+        
+        // Scroll suave a la noticia expandida
+        newsCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+  
+  // Animación de las tarjetas al aparecer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  newsCards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(card);
+  });
+  
+  // Cerrar acordeón al hacer clic fuera
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.news-card') && !e.target.closest('.read-more')) {
+      document.querySelectorAll('.news-card.expanded').forEach(card => {
+        card.classList.remove('expanded');
+      });
+    }
+  });
+  
+  // Contar palabras automáticamente
+  document.querySelectorAll('.news-full .lang-es, .news-full .lang-en').forEach(element => {
+    const text = element.textContent;
+    const wordCount = text.split(/\s+/).filter(word => word.length > 0).length;
+    const wordCountElement = element.closest('.news-card').querySelector('.word-count.' + element.className);
+    
+    if (wordCountElement) {
+      if (element.classList.contains('lang-es')) {
+        wordCountElement.textContent = wordCount + ' palabras';
+      } else {
+        wordCountElement.textContent = wordCount + ' words';
+      }
+    }
+  });
+});

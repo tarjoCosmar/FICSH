@@ -91,196 +91,122 @@
     </div>
   </nav>
 
-
-  <div style="overflow:hidden;" class="noticias-container" id="noticias-container"><!-- Aquí se cargan las noticias -->
-    
-    <div><!--noticia 31 de marzo /2025 -->
-      <div class="noticias-item img">
-        <img src="img/noticias/noticia1.jpg">
+  <section class="news-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title lang-es">Noticias FICSH</h2>
+        <h2 class="section-title lang-en">FICSH News</h2>
+        <p class="section-subtitle lang-es">Mantente informado sobre nuestras actividades y logros</p>
+        <p class="section-subtitle lang-en">Stay informed about our activities and achievements</p>
       </div>
-      <div class="col-md-6">
-        <h3> 31 de marzo /2025</h3>
-        <h2>Rafael Pandam Nuevo presidente de la nación shuar del Ecuador</h2>
-        <p> La Federación Interprovincial de Centros Shuar (FICSH) felicita con orgullo a Rafael Pandam por su elección como presidente de la Nación Shuar del Ecuador (NASHE). Reconocemos su liderazgo y compromiso con nuestra causa. Juntos, como organizaciones hermanas, continuaremos trabajando por el desarrollo integral del pueblo Shuar, protegiendo nuestra Amazonía y fortaleciendo nuestra identidad cultural.
-        <br>Ab. David Tankamash<br>Presidente<br>
-        </p>
-        <br>
-        <div class="col-md-6">
-          <h3> March 31st /2025</h3>
-          <h2>Rafael Pandam New President of the Shuar Nation of Ecuador</h2>
-          <p> The Interprovincial Federation of Shuar Centers (FICSH) proudly congratulates Rafael Pandam for his election as President of the Shuar Nation of Ecuador (NASHE). We recognize his leadership and commitment to our cause. Together, as sister organizations, we will continue working for the integral development of the Shuar people, protecting our Amazon and strengthening our cultural identity
-            <br>Ab. David Tankamash </Br>President<br>
-          </p>
-        </div>
+      
+      <div class="news-filters">
+        <button class="filter-btn active" data-filter="all">
+          <span class="lang-es">Todas</span>
+          <span class="lang-en">All</span>
+        </button>
+        <button class="filter-btn" data-filter="eventos">
+          <span class="lang-es">Eventos</span>
+          <span class="lang-en">Events</span>
+        </button>
+        <button class="filter-btn" data-filter="comunicados">
+          <span class="lang-es">Comunicados</span>
+          <span class="lang-en">Releases</span>
+        </button>
+        <button class="filter-btn" data-filter="alianzas">
+          <span class="lang-es">Alianzas</span>
+          <span class="lang-en">Partnerships</span>
+        </button>
       </div>
-      <br>
-    </div>
-
-    <div><!--noticia 28 de marzo de 2025  -->
-      <div class="noticias-item img">
-        <img src="img/noticias/noticia2.jpg">
-      </div>
-      <div class="col-md-6">
-        <h3> Viernes, 28 de marzo de 2025 </h3>
-        <h2> Comunicado de Prensa</h2>
-        <p>El presidente de la FICSH, Ab. David Tankamash, sostuvo un encuentro productivo con el gobernador William Gómez, donde se ratificó el apoyo institucional al Consejo de Gobierno Shuar. 
-          Durante la reunión, Tankamash reiteró el respaldo de la organización al presidente Noboa en la segunda vuelta electoral, y ambos líderes establecieron compromisos concretos para impulsar proyectos sociales y educativos que beneficien directamente a las comunidades Shuar
-        </p>
-        <br>
-        <div class="col-md-6">
-          <h3> Friday, March 28, 2025  </h3>
-          <h2> Press Release </h2>
-          <p>
-            The president of the FICSH, Ab. David Tankamash, held a productive meeting with Governor William Gomez, where the institutional support to the Shuar Governing Council was ratified. During the meeting, Tankamash reiterated the support of the organization to President Noboa in the second round of elections, and both leaders established concrete commitments to promote social and educational projects that directly benefit the Shuar communities.
-        </div>
-        <br>
-      </div>
-    </div>
-
-    <div><!--noticia 26 de marzo de 2025 -->
-      <div class="noticias-item img">
-        <img src="img/noticias/noticia3.jpg" alt="CAMPEONATO DE INDOR INTERCOMUNIDADES Y BARRIALES COPA AMISTAD RIO BLANCO 2024">
-      </div>
-      <div class="col-md-6">
-        <h3> 26 de marzo de 2025  </h3>
-        <h2>Feria de Oferta Académica en Sucúa acerca oportunidades de educación superior a la juventud amazónica</h2>
-        <p>La SENESCYT impulsó la Feria de Oferta Académica en Sucúa, conectando a 500 jóvenes amazónicos con universidades e institutos. El Ab. David Tankamash (FICSH) y el Dr. Guayas (SENESCYT) resaltaron esta iniciativa como un paso clave para democratizar la educación superior en la Amazonía, abriendo caminos de crecimiento para la juventud indígena. Sucúa.</p><br>
-          <div class="col-md-6">
-            <h3>  26 March 2025  </h3>
-            <h2>Academic Offering Fair in Sucúa brings higher education opportunities to Amazonian youth</h2>
-            <p>
-              SENESCYT promoted the Academic Offering Fair in Sucúa, connecting 500 Amazonian youth with universities and institutes. David Tankamash (FICSH) and Dr. Guayas (SENESCYT) highlighted this initiative as a key step to democratize higher education in the Amazon, opening paths of growth for indigenous youth.Sucúa.</p><br>
+      
+      <div class="news-grid">
+        <!-- Noticia 1 -->
+        <article class="news-card" data-category="comunicados">
+          <div class="news-image">
+            <img src="img/noticias/noticia1.jpg" alt="Rafael Pandam Nuevo presidente de la nación shuar del Ecuador">
+            <span class="news-date lang-es">31 de marzo, 2025</span>
+            <span class="news-date lang-en">March 31, 2025</span>
           </div>
+          <div class="news-content">
+            <h3 class="news-title lang-es">Rafael Pandam Nuevo presidente de la nación shuar del Ecuador</h3>
+            <h3 class="news-title lang-en">Rafael Pandam New President of the Shuar Nation of Ecuador</h3>
+            
+            <div class="news-excerpt">
+              <p class="lang-es">La Federación Interprovincial de Centros Shuar (FICSH) felicita con orgullo a Rafael Pandam por su elección como presidente...</p>
+              <p class="lang-en">The Interprovincial Federation of Shuar Centers (FICSH) proudly congratulates Rafael Pandam for his election as President...</p>
+            </div>
+            
+            <div class="news-full">
+              <div class="lang-es">
+                <p>La Federación Interprovincial de Centros Shuar (FICSH) felicita con orgullo a Rafael Pandam por su elección como presidente de la Nación Shuar del Ecuador (NASHE). Reconocemos su liderazgo y compromiso con nuestra causa. Juntos, como organizaciones hermanas, continuaremos trabajando por el desarrollo integral del pueblo Shuar, protegiendo nuestra Amazonía y fortaleciendo nuestra identidad cultural.</p>
+                <p>Ab. David Tankamash<br>Presidente</p>
+              </div>
+              <div class="lang-en">
+                <p>The Interprovincial Federation of Shuar Centers (FICSH) proudly congratulates Rafael Pandam for his election as President of the Shuar Nation of Ecuador (NASHE). We recognize his leadership and commitment to our cause. Together, as sister organizations, we will continue working for the integral development of the Shuar people, protecting our Amazon and strengthening our cultural identity.</p>
+                <p>Ab. David Tankamash<br>President</p>
+              </div>
+            </div>
+            
+            <a href="#" class="read-more">
+              <span class="lang-es">Leer más</span>
+              <span class="lang-en">Read more</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            
+            <div class="word-count lang-es">45 palabras</div>
+            <div class="word-count lang-en">45 words</div>
+          </div>
+        </article>
+        
+        <!-- Noticia 2 -->
+        <article class="news-card" data-category="comunicados">
+          <div class="news-image">
+            <img src="img/noticias/noticia2.jpg" alt="Comunicado de Prensa">
+            <span class="news-date lang-es">28 de marzo, 2025</span>
+            <span class="news-date lang-en">March 28, 2025</span>
+          </div>
+          <div class="news-content">
+            <h3 class="news-title lang-es">Comunicado de Prensa</h3>
+            <h3 class="news-title lang-en">Press Release</h3>
+            
+            <div class="news-excerpt">
+              <p class="lang-es">El presidente de la FICSH, Ab. David Tankamash, sostuvo un encuentro productivo con el gobernador William Gómez...</p>
+              <p class="lang-en">The president of the FICSH, Ab. David Tankamash, held a productive meeting with Governor William Gomez...</p>
+            </div>
+            
+            <div class="news-full">
+              <div class="lang-es">
+                <p>El presidente de la FICSH, Ab. David Tankamash, sostuvo un encuentro productivo con el gobernador William Gómez, donde se ratificó el apoyo institucional al Consejo de Gobierno Shuar. Durante la reunión, Tankamash reiteró el respaldo de la organización al presidente Noboa en la segunda vuelta electoral, y ambos líderes establecieron compromisos concretos para impulsar proyectos sociales y educativos que beneficien directamente a las comunidades Shuar.</p>
+              </div>
+              <div class="lang-en">
+                <p>The president of the FICSH, Ab. David Tankamash, held a productive meeting with Governor William Gomez, where the institutional support to the Shuar Governing Council was ratified. During the meeting, Tankamash reiterated the support of the organization to President Noboa in the second round of elections, and both leaders established concrete commitments to promote social and educational projects that directly benefit the Shuar communities.</p>
+              </div>
+            </div>
+            
+            <a href="#" class="read-more">
+              <span class="lang-es">Leer más</span>
+              <span class="lang-en">Read more</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            
+            <div class="word-count lang-es">48 palabras</div>
+            <div class="word-count lang-en">48 words</div>
+          </div>
+        </article>
+        
+        <!-- Más noticias con la misma estructura -->
+        
+      </div>
+      
+      <div class="pagination">
+        <a href="#" class="page-btn active">1</a>
+        <a href="#" class="page-btn">2</a>
+        <a href="#" class="page-btn">3</a>
+        <span>...</span>
+        <a href="#" class="page-btn">5</a>
       </div>
     </div>
-
-    <div><!--noticia 22 de marzo 2025  -->
-      <div class="noticias-item img">
-        <img src="img/noticias/noticia4 (2).jpg" alt="campaña del cuidado de la vistapor parte del gab Rio Blanco">
-      </div>
-      <div class="col-md-6">
-        <h3> 22 de marzo 2025 </h3>
-        <h2>Esteban Sanchima asume la presidencia con respaldo de la FICSH en histórica asamblea Shuar</h2>
-        <p>La Asociación Apkius (Palora) eligió democráticamente a Esteban Sanchima como su nuevo presidente en una asamblea histórica. Con el apoyo del Lic. Pedro Andicha (FICSH), se fortaleció la alianza para trabajar unidos por el territorio. ¡Juntos construimos el futuro Shuar con identidad y progreso!. <br>
-        </p>
-        <br>
-      </div>
-      <div class="col-md-6">
-        <h3> March 22, 2025 </h3>
-        <h2>Esteban Sanchima assumes the presidency with the support of the FICSH in a historic Shuar assembly.</h2>
-        <p> The Apkius Association (Palora) democratically elected Esteban Sanchima as its new president in a historic assembly. With the support of Mr. Pedro Andicha (FICSH), the alliance was strengthened to work together for the territory. Together we build the Shuar future with identity and progress.<br>
-        </p>
-      </div>
-      <br>
-    </div>
-
-    <div><!--noticia 15 de febrero de 2025 -->
-      <div class="noticias-item img">
-        <img src="img/noticias/noticia6 (2).jpg" alt="campionate de indor gab Rio Blanco">
-      </div>
-      <div class="col-md-6">
-        <h3> 15 de febrero de 2025 </h3>
-        <h3>Becas y oportunidades: Nueva alianza FICSH-CAMAFRICOM</h3>
-        <p>  </p>
-        <br>"La FICSH y CAMAFRICOM unen esfuerzos mediante un convenio quinquenal que garantizará becas y formación académica para comunidades indígenas. Esta alianza estratégica promoverá el desarrollo integral, fortaleciendo la autodeterminación y preservando la identidad cultural de los pueblos originarios." <br> <br>
-      </div>
-      <br>
-      <div class="col-md-6">
-        <h3>  February 15, 2025</h3>
-        <h3>Scholarships and opportunities: New FICSH-CAMAFRICOM alliance
-        </h3>
-        <p>"FICSH and CAMAFRICOM join forces through a five-year agreement that will guarantee scholarships and academic training for indigenous communities. This strategic alliance will promote integral development, strengthening self-determination and preserving the cultural identity of indigenous peoples."
-        </p>
-        <br> 
-      </div>
-    </div>
-
-    <div><!--noticia 12 de febrero del 2025 -->
-      <div class="noticias-item img">
-        <img src="img/noticias/noticia7 (2).jpg" alt="Escuela de danza gab Rio Blanco">
-      </div>
-      <div class="col-md-6">
-        <h3> 12 de febrero del 2025 </h3>
-        <h2>  
-          La FICSH y la Corte tejen puentes entre dos justicias
-          </h2>
-        <p> ¡Un paso histórico para la justicia intercultural! En el #DíaDeLaAmazonía, la FICSH facilitó un diálogo transformador entre autoridades judiciales y líderes Shuar, avanzando hacia la integración de ambos sistemas de justicia. Con el apoyo del Consejo de la Judicatura y jueces especializados, se crearon protocolos conjuntos para resolver conflictos territoriales y familiares, honrando la cosmovisión y derechos del pueblo Shuar.".  </p>
-        <br> 
-      </div>
-      <div class="col-md-6">
-        <h3> February 12, 2025 </h3>
-        <h2>The FICSH and the Court build bridges between two justices</h2>
-        <p>A historic step for intercultural justice! In the #DíaDeLaAmazonía, the FICSH facilitated a transformative dialogue between judicial authorities and Shuar leaders, moving towards the integration of both justice systems. With the support of the Council of the Judiciary and specialized judges, joint protocols were created to resolve territorial and family conflicts, honoring the worldview and rights of the Shuar people.". 
-        </p>
-        <br> 
-      </div>
-    </div>
-
-    <div><!--noticia 31 de enero 2025-->
-      <div class="noticias-item img">
-        <img src="img/noticias/noticia8 (2).jpg" alt="Plan de Desarrollo y Ordenamiento Territorial del Gab Rio Blanco">
-      </div>
-      <div class="col-md-6">
-        <h3> 31 de enero  </h3>
-        <h2> La FICSH celebra 64 años gestionando futuro: becas y educación para el pueblo Shuar</h2>
-        <p>64 años de la FICSH transformando realidades. En Cuenca, el presidente David Tankamash y su equipo lograron acuerdos clave: becas, ampliación de oferta educativa y carreras con enfoque intercultural Shuar, trabajando junto a autoridades ministeriales. Próximamente, llevaremos una feria educativa a Morona Santiago y reforzaremos el apoyo para la titulación profesional de nuestros estudiantes." 
-        </p>
-      </div>
-      <br>
-      <div class="col-md-6">
-        <h3> January 31</h3>
-        <h2> FICSH Celebrates 64 Years of Managing the Future: Scholarships and Education for the Shuar People</h2>
-        <p> 64 years of the FICSH transforming realities. In Cuenca, President David Tankamash and his team reached key agreements: scholarships, expansion of educational offerings, and careers with an intercultural Shuar approach, working together with ministerial authorities. Soon, we will bring an educational fair to Morona Santiago and we will reinforce the support for the professional qualification of our students."
-        </p>
-      </div>
-      <br>
-    </div>
-
-    <div><!--noticia 27 de enero del 2025-->
-      <div class="noticias-item img">
-        <img src="img/noticias/noticia9.jpg" alt="Enfretamiento de ESCUELA DE FÚTBOL GAD Río Blanco y ESCUELA DE FÚTBOL HUAMBI">
-      </div>
-      <div class="col-md-6">
-        <h3> 27 de enero del 2025</h3>
-        <h2> 
-          FICSH en acción! Rechacen reunión fraudulenta; pronto Asamblea Oficial
-          </h2>
-        <p> 
-          La FICSH, mediante su presidente David Tankamash, declara ilegítima la convocatoria de Domingo Ankuash (30-31/01/2025), tras su expulsión institucional en junio/2024. Exhortamos a las asociaciones base a respetar los canales oficiales. Próximamente convocaremos nuestra Asamblea General Ordinaria legítima, donde presentaremos los avances institucionales y celebraremos nuestro aniversario con total transparencia.</p>
-        <br> 
-      </div>
-      <br>
-      <div class="col-md-6">
-        <h3> February 27, 2025</h3>
-        <h2> FICSH in action! Reject fraudulent meeting; Official Assembly coming soon</h2>
-        <p>The FICSH, through its president David Tankamash, declares the summons of Domingo Ankuash (30-31/01/2025) illegitimate, after his institutional expulsion in June/2024. We urge grassroots associations to respect official channels. We will soon convene our legitimate Ordinary General Assembly, where we will present the institutional progress and celebrate our anniversary with total transparency.
-          </p>
-          <br>
-        </div>
-    </div>
-
-    <div><!--noticia 23 noviembre 2024 -->
-      <div class="noticias-item img">
-        <img src="img/noticias/noticia5 (2).jpg" alt="campaña de vacunacion gab Rio Blanco">
-      </div>
-      <div class="col-md-6">
-        <h3> 23 noviembre 2024</h3>
-        <h2>Alianza FICSH-Corea reactiva proyecto agrícola </h2>
-        <p>La FICSH, en alianza con Dundas  Corpratión y empresas coreanas, relanza el Proyecto Ecuador Orgánico. El Dr. Kim, creador del abono NITO, visitará próximamente las comunidades Shuar para capacitar a nuestros productores en nanotecnología agrícola, fortaleciendo cultivos competitivos y abriendo oportunidades en mercados globales... 
-         </p>
-         <br>
-      </div>
-      <div class="col-md-6">
-        <h3> November 23, 2024</h3>
-        <h2> FICSH-Korea Alliance Reactivates Agricultural Project 
-        </h2>
-        <p>FICSH, in partnership with Dundas Corporation and Korean companies, relaunches the Ecuador Organic Project. Dr. Kim, creator of the NITO fertilizer, will soon visit the Shuar communities to train our producers in agricultural nanotechnology, strengthening competitive crops and opening opportunities in global markets.
-        </p>
-      </div>
-       <br>
-    </div>
-   
-  </div>
+  </section>
 
   <footer>
     <div class="footer-container">
@@ -393,6 +319,42 @@
       this.classList.toggle('expanded');
       this.setAttribute('aria-expanded', !isExpanded);
     });
+  }
+});
+  </script>
+
+  <script>
+// Usa el mismo código que funciona en index.html
+document.addEventListener('DOMContentLoaded', function() {
+  const languageSelect = document.getElementById('languageSelect');
+  
+  if (languageSelect) {
+    // Configurar idioma guardado
+    const savedLang = localStorage.getItem('preferredLanguage') || 'es';
+    languageSelect.value = savedLang;
+    updateLanguage(savedLang);
+    
+    // Manejador de eventos
+    languageSelect.addEventListener('change', function() {
+      const lang = this.value;
+      localStorage.setItem('preferredLanguage', lang);
+      updateLanguage(lang);
+    });
+  }
+
+  function updateLanguage(lang) {
+    // 1. Actualizar textos con data attributes (como en index.html)
+    document.querySelectorAll('[data-lang-es], [data-lang-en]').forEach(el => {
+      const text = el.getAttribute(`data-lang-${lang}`);
+      if (text) el.textContent = text;
+    });
+    
+    // 2. Mostrar/ocultar bloques de idioma
+    document.querySelectorAll('.lang-es, .lang-en').forEach(el => {
+      el.style.display = el.classList.contains(`lang-${lang}`) ? 'block' : 'none';
+    });
+    
+    console.log(`Idioma cambiado a: ${lang}`);
   }
 });
   </script>
