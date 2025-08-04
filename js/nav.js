@@ -253,3 +253,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// ===== FUNCIONALIDAD PROSPERAR =====
+function initFundraising() {
+  // Selector de idioma (integración con sistema existente)
+  const languageSelect = document.getElementById('languageSelect');
+  if (languageSelect) {
+    languageSelect.addEventListener('change', updateFundraisingLanguage);
+  }
+
+  // Botones de donación
+  document.querySelectorAll('.btn-donate').forEach(button => {
+    button.addEventListener('click', handleDonation);
+  });
+
+  // Compartir en redes
+  document.getElementById('facebook-share')?.addEventListener('click', shareOnFacebook);
+}
+
+function handleDonation() {
+  const reward = this.closest('.reward-card').querySelector('h4').textContent.trim();
+  console.log(`Donación seleccionada: ${reward}`);
+  // Integrar con PayPal/Stripe aquí
+}
+
+function shareOnFacebook() {
+  const url = encodeURIComponent(window.location.href);
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+}
+
+// Inicialización al cargar
+document.addEventListener('DOMContentLoaded', initFundraising);
