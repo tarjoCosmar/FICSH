@@ -156,101 +156,46 @@ function initNavigation() {
 }
 
 // news.js
-document.addEventListener('DOMContentLoaded', function() {
-  // Filtrado de noticias
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const newsCards = document.querySelectorAll('.news-card');
+
+function initMagazineFilters() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
   
-  filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      // Remover clase active de todos los botones
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      // Agregar clase active al botón clickeado
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      filterBtns.forEach(b => b.classList.remove('active'));
       this.classList.add('active');
       
-      const filter = this.getAttribute('data-filter');
-      
-      // Filtrar noticias
-      newsCards.forEach(card => {
-        if (filter === 'all') {
-          card.style.display = 'flex';
-        } else {
-          const category = card.getAttribute('data-category');
-          if (category === filter) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        }
-      });
+      const filter = this.dataset.filter;
+      filterArticles(filter);
     });
   });
+}
+
+function filterArticles(category) {
+  const articles = document.querySelectorAll('.featured-article, .standard-article');
   
-  // Sistema de "Leer más/menos"
-  const readMoreLinks = document.querySelectorAll('.read-more');
-  
-  readMoreLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const newsCard = this.closest('.news-card');
-      
-      // Si la tarjeta ya está expandida, contraerla
-      if (newsCard.classList.contains('expanded')) {
-        newsCard.classList.remove('expanded');
-      } else {
-        // Contraer todas las demás noticias expandidas
-        document.querySelectorAll('.news-card.expanded').forEach(card => {
-          card.classList.remove('expanded');
-        });
-        // Expandir la noticia actual
-        newsCard.classList.add('expanded');
-        
-        // Scroll suave a la noticia expandida
-        newsCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    });
-  });
-  
-  // Animación de las tarjetas al aparecer
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  
-  newsCards.forEach(card => {
-    card.style.opacity = 0;
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(card);
-  });
-  
-  // Cerrar acordeón al hacer clic fuera
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.news-card') && !e.target.closest('.read-more')) {
-      document.querySelectorAll('.news-card.expanded').forEach(card => {
-        card.classList.remove('expanded');
-      });
+  articles.forEach(article => {
+    if (category === 'all' || article.dataset.category === category) {
+      article.style.display = 'block';
+    } else {
+      article.style.display = 'none';
     }
   });
+}
+
+// Inicialización
+document.addEventListener('DOMContentLoaded', function() {
+  initMagazineFilters();
   
-  // Contar palabras automáticamente
-  document.querySelectorAll('.news-full .lang-es, .news-full .lang-en').forEach(element => {
-    const text = element.textContent;
-    const wordCount = text.split(/\s+/).filter(word => word.length > 0).length;
-    const wordCountElement = element.closest('.news-card').querySelector('.word-count.' + element.className);
-    
-    if (wordCountElement) {
-      if (element.classList.contains('lang-es')) {
-        wordCountElement.textContent = wordCount + ' palabras';
-      } else {
-        wordCountElement.textContent = wordCount + ' words';
-      }
-    }
+  // Animación al hacer hover en artículos
+  const articles = document.querySelectorAll('.standard-article');
+  articles.forEach(article => {
+    article.addEventListener('mouseenter', function() {
+      this.querySelector('img').style.transform = 'scale(1.05)';
+    });
+    article.addEventListener('mouseleave', function() {
+      this.querySelector('img').style.transform = 'scale(1)';
+    });
   });
 });
 

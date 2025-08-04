@@ -91,121 +91,156 @@
     </div>
   </nav>
 
-  <section class="news-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title lang-es">Noticias FICSH</h2>
-        <h2 class="section-title lang-en">FICSH News</h2>
-        <p class="section-subtitle lang-es">Mantente informado sobre nuestras actividades y logros</p>
-        <p class="section-subtitle lang-en">Stay informed about our activities and achievements</p>
-      </div>
+  <section class="news-magazine">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title lang-es">Noticias FICSH</h2>
+      <h2 class="section-title lang-en">FICSH News</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle lang-es">Mantente informado sobre nuestras actividades y logros</p>
+      <p class="section-subtitle lang-en">Stay informed about our activities and achievements</p>
+    </div>
+    
+    <!-- Filtros (mejorados visualmente) -->
+    <div class="news-filters">
+      <button class="filter-btn active" data-filter="all">
+        <span class="lang-es">Todas</span>
+        <span class="lang-en">All</span>
+      </button>
+      <button class="filter-btn" data-filter="eventos">
+        <i class="fas fa-calendar-alt"></i>
+        <span class="lang-es">Eventos</span>
+        <span class="lang-en">Events</span>
+      </button>
+      <button class="filter-btn" data-filter="comunicados">
+        <i class="fas fa-bullhorn"></i>
+        <span class="lang-es">Comunicados</span>
+        <span class="lang-en">Releases</span>
+      </button>
+      <button class="filter-btn" data-filter="alianzas">
+        <i class="fas fa-handshake"></i>
+        <span class="lang-es">Alianzas</span>
+        <span class="lang-en">Partnerships</span>
+      </button>
+    </div>
+    
+    <!-- Grid de Noticias (nuevo diseño) -->
+    <div class="magazine-grid">
+
+      <!-- Noticia 28 de julio -->
+      <article class="featured-article" data-category="eventos">
+        <div class="featured-image">
+          <img src="img/noticias/noticia10.jpg" alt="Rafael Pandam Nuevo presidente">
+        </div>
+        <div class="featured-content">
+          <div class="article-meta">
+            <span class="article-category">Eventos</span>
+            <span class="article-date lang-es">28 de julio, 2025</span>
+            <span class="article-date lang-en">July 28, 2025</span>
+          </div>
+          <h3 class="article-title lang-es">🕊️🎨 ARTE POR LA PAZ SIGUE TRANSFORMANDO VIDAS EN SANTA ISABEL 🌿🛖</h3>
+          <h3 class="article-title lang-en">🟢🔴🟢 🕊️🎨 ARTE POR LA PAZ CONTINUES TRANSFORMING LIVES IN SANTA ISABEL 🌿🛖.</h3>
+          <p class="article-excerpt lang-es">El pasado viernes 25 de julio, la comunidad Shuar de Santa Isabel vivió una jornada inolvidable gracias al programa “Arte por la Paz”, impulsado por jóvenes líderes de la FICSH en convenio con la Alianza para el Emprendimiento e Innovación (AEI).</p>
+          <p class="article-excerpt lang-es">💡 Esta segunda fase del proyecto buscó reducir la violencia psicológica mediante herramientas artísticas que fortalecen la identidad cultural y promueven una cultura de paz.</p>
+          <p class="article-excerpt lang-es">👥 Más de 50 jóvenes y adultos participaron en concursos de dibujo ✏️ y cuentos 📖 bajo los temas “Cómo evitar la violencia” y “Penker Pujustin” (Arte por la Paz), sembrando esperanza, reflexión y creatividad en su comunidad.</p>
+          <p class="article-excerpt lang-es">🌱 Gracias al programa Liderazgo Comunitario – LiderLab, los ganadores accedieron a un capital semilla de $1.000 para hacer realidad esta valiosa iniciativa.</p>
+          <p class="article-excerpt lang-es">🙌 Como FICSH, celebramos con orgullo el compromiso de nuestros socios, su creatividad y el poder transformador del arte cuando nace desde el corazón de nuestro pueblo.</p>
+          <p class="article-excerpt lang-en">Last Friday, July 25, the Shuar community of Santa Isabel experienced an unforgettable day thanks to the “Art for Peace” program, promoted by young leaders of the FICSH in partnership with the Alliance for Entrepreneurship and Innovation (AEI).
+          <p class="article-excerpt lang-en">💡 This second phase of the project sought to reduce psychological violence through artistic tools that strengthen cultural identity and promote a culture of peace.</p>
+          <p class="article-excerpt lang-en">👥 More than 50 young people and adults participated in drawing ✏️ and storytelling contests 📖 under the themes “How to avoid violence” and “Penker Pujustin” (Art for Peace), sowing hope, reflection and creativity in their community.</p>
+          <p class="article-excerpt lang-en">🌱 Thanks to the Community Leadership - LiderLab program, the winners accessed a seed capital of $1,000 to make this valuable initiative a reality.</p>
+          <p class="article-excerpt lang-en">🙌 As FICSH, we proudly celebrate the commitment of our partners, their creativity and the transformative power of art when it is born from the heart of our people.</p>
+        </div>
+      </article>
+
+      <!-- Noticia 27 de julio -->
+      <article class="featured-article" data-category="comunicados">
+        <div class="featured-image">
+          <img src="img/noticias/noticia11.jpg" alt="Rafael Pandam Nuevo presidente">
+        </div>
+        <div class="featured-content">
+          <div class="article-meta">
+            <span class="article-category">Comunicado</span>
+            <span class="article-date lang-es">27 de julio, 2025</span>
+            <span class="article-date lang-en">July 27, 2025</span>
+          </div>
+          <h3 class="article-title lang-es">🟢🔴🟢 ¡TRIUNFO HISTÓRICO DE LA FICSH EN LA LIGA PRO INDÍGENA! ⚽🏆</h3>
+          <h3 class="article-title lang-en">🟢🔴🟢 FICSH HISTORIC TRIUMPH IN THE PRO-INDIGENOUS LEAGUE! ⚽🏆</h3>
+          <p class="article-excerpt lang-es">Este domingo 27 de julio, nuestro equipo demostró garra, coraje y corazón 💪🔥 al vencer 3️⃣ - 2️⃣ a la selección parroquial de Tutin Entza (Cantón Taisha) en un partidazo inolvidable, ¡clasificando a las SEMIFINALES! 🙌🎉</p>
+          <p class="article-excerpt lang-es">👏 Destacamos al joven Robert Taijin, nuestro flamante goleador, quien con su talento nos hace soñar con un futuro en el fútbol profesional. 🌟⚽</p>
+          <p class="article-excerpt lang-es">Desde la Federación Interprovincial de Centros Shuar – FICSH, expresamos nuestro orgullo y total respaldo a estos jóvenes que nos inspiran con cada jugada, con cada gol y con su entrega en la cancha.</p>
+          <p class="article-excerpt lang-es">¡Soñamos en lo más alto! ¡Vamos con todo! 🇪🇨🔥</p>
+          <p class="article-excerpt lang-es">Ab. David Tankamash<br>Presidente FICSH</p>
+          <p class="article-excerpt lang-en">This Sunday, July 27, our team showed grit, courage and heart 💪🔥 by beating 3️⃣ - 2️⃣ the Tutin Entza parish team (Taisha Canton) in an unforgettable match, qualifying to the SEMIFINALS! 🙌🎉</p>
+          <p class="article-excerpt lang-en">👏 We highlight the young Robert Taijin, our brand new goal scorer, who with his talent makes us dream of a future in professional soccer. 🌟⚽</p>
+          <p class="article-excerpt lang-en">From the Interprovincial Federation of Shuar Centers - FICSH, we express our pride and full support to these young people who inspire us with every play, with every goal and with their delivery on the field.</p>
+          <p class="article-excerpt lang-en">We dream at the top! Let's go all out! 🇪🇨🔥</p>
+          <p class="article-excerpt lang-en">Ab. David Tankamash<br>President FICSH</p>
+        </div>
+      </article>
+
+      <!-- Noticia 31 de marzo -->
+      <article class="featured-article" data-category="comunicados">
+        <div class="featured-image">
+          <img src="img/noticias/noticia1.jpg" alt="Rafael Pandam Nuevo presidente">
+        </div>
+        <div class="featured-content">
+          <div class="article-meta">
+            <span class="article-category">Comunicado</span>
+            <span class="article-date lang-es">31 de marzo, 2025</span>
+            <span class="article-date lang-en">March 31, 2025</span>
+          </div>
+          <h3 class="article-title lang-es">Rafael Pandam Nuevo presidente de la nación shuar del Ecuador</h3>
+          <h3 class="article-title lang-en">Rafael Pandam New President of the Shuar Nation of Ecuador</h3>
+          <p class="article-excerpt lang-es">La Federación Interprovincial de Centros Shuar (FICSH) felicita con orgullo a Rafael Pandam por su elección como presidente de la Nación Shuar del Ecuador (NASHE). Reconocemos su liderazgo y compromiso con nuestra causa. Juntos, como organizaciones hermanas, continuaremos trabajando por el desarrollo integral del pueblo Shuar, protegiendo nuestra Amazonía y fortaleciendo nuestra identidad cultural.</p>
+          <p class="article-excerpt lang-en">The Interprovincial Federation of Shuar Centers (FICSH) proudly congratulates Rafael Pandam for his election as President of the Shuar Nation of Ecuador (NASHE). We recognize his leadership and commitment to our cause. Together, as sister organizations, we will continue working for the integral development of the Shuar people, protecting our Amazon and strengthening our cultural identity</p>
+        </div>
+      </article>
+
+      <!-- 28 de marzo de 2025  -->
+      <article class="featured-article" data-category="comunicados">
+        <div class="featured-image">
+          <img src="img/noticias/noticia2.jpg" alt="Rafael Pandam Nuevo presidente">
+        </div>
+        <div class="featured-content">
+          <div class="article-meta">
+            <span class="article-category">Comunicado</span>
+            <span class="article-date lang-es">28 de marzo, 2025</span>
+            <span class="article-date lang-en">March 28, 2025</span>
+          </div>
+          <h3 class="article-title lang-es">•	FICSH y Gobernación articulan acciones para fortalecer el bienestar de las comunidades Shuar</h3>
+          <h3 class="article-title lang-en">FICSH and Governor's Office articulate actions to strengthen the well-being of Shuar communities</h3>
+          <p class="article-excerpt lang-es">El presidente de la FICSH, Ab. David Tankamash, sostuvo un encuentro productivo con el gobernador William Gómez, donde se ratificó el apoyo institucional al Consejo de Gobierno Shuar. 
+          Durante la reunión, Tankamash reiteró el respaldo de la organización al presidente Noboa en la segunda vuelta electoral, y ambos líderes establecieron compromisos concretos para impulsar proyectos sociales y educativos que beneficien directamente a las comunidades Shuar</p>
+          <p class="article-excerpt lang-en">The president of the FICSH, Ab. David Tankamash, held a productive meeting with Governor William Gomez, where the institutional support to the Shuar Governing Council was ratified. 
+          During the meeting, Tankamash reiterated the support of the organization to President Noboa in the second round of elections, and both leaders established concrete</p>
+        </div>
+      </article>
       
-      <div class="news-filters">
-        <button class="filter-btn active" data-filter="all">
-          <span class="lang-es">Todas</span>
-          <span class="lang-en">All</span>
-        </button>
-        <button class="filter-btn" data-filter="eventos">
-          <span class="lang-es">Eventos</span>
-          <span class="lang-en">Events</span>
-        </button>
-        <button class="filter-btn" data-filter="comunicados">
-          <span class="lang-es">Comunicados</span>
-          <span class="lang-en">Releases</span>
-        </button>
-        <button class="filter-btn" data-filter="alianzas">
-          <span class="lang-es">Alianzas</span>
-          <span class="lang-en">Partnerships</span>
-        </button>
-      </div>
       
-      <div class="news-grid">
-        <!-- Noticia 1 -->
-        <article class="news-card" data-category="comunicados">
-          <div class="news-image">
-            <img src="img/noticias/noticia1.jpg" alt="Rafael Pandam Nuevo presidente de la nación shuar del Ecuador">
-            <span class="news-date lang-es">31 de marzo, 2025</span>
-            <span class="news-date lang-en">March 31, 2025</span>
-          </div>
-          <div class="news-content">
-            <h3 class="news-title lang-es">Rafael Pandam Nuevo presidente de la nación shuar del Ecuador</h3>
-            <h3 class="news-title lang-en">Rafael Pandam New President of the Shuar Nation of Ecuador</h3>
-            
-            <div class="news-excerpt">
-              <p class="lang-es">La Federación Interprovincial de Centros Shuar (FICSH) felicita con orgullo a Rafael Pandam por su elección como presidente...</p>
-              <p class="lang-en">The Interprovincial Federation of Shuar Centers (FICSH) proudly congratulates Rafael Pandam for his election as President...</p>
-            </div>
-            
-            <div class="news-full">
-              <div class="lang-es">
-                <p>La Federación Interprovincial de Centros Shuar (FICSH) felicita con orgullo a Rafael Pandam por su elección como presidente de la Nación Shuar del Ecuador (NASHE). Reconocemos su liderazgo y compromiso con nuestra causa. Juntos, como organizaciones hermanas, continuaremos trabajando por el desarrollo integral del pueblo Shuar, protegiendo nuestra Amazonía y fortaleciendo nuestra identidad cultural.</p>
-                <p>Ab. David Tankamash<br>Presidente</p>
-              </div>
-              <div class="lang-en">
-                <p>The Interprovincial Federation of Shuar Centers (FICSH) proudly congratulates Rafael Pandam for his election as President of the Shuar Nation of Ecuador (NASHE). We recognize his leadership and commitment to our cause. Together, as sister organizations, we will continue working for the integral development of the Shuar people, protecting our Amazon and strengthening our cultural identity.</p>
-                <p>Ab. David Tankamash<br>President</p>
-              </div>
-            </div>
-            
-            <a href="#" class="read-more">
-              <span class="lang-es">Leer más</span>
-              <span class="lang-en">Read more</span>
-              <i class="fas fa-chevron-down"></i>
-            </a>
-            
-            <div class="word-count lang-es">45 palabras</div>
-            <div class="word-count lang-en">45 words</div>
-          </div>
-        </article>
-        
-        <!-- Noticia 2 -->
-        <article class="news-card" data-category="comunicados">
-          <div class="news-image">
-            <img src="img/noticias/noticia2.jpg" alt="Comunicado de Prensa">
-            <span class="news-date lang-es">28 de marzo, 2025</span>
-            <span class="news-date lang-en">March 28, 2025</span>
-          </div>
-          <div class="news-content">
-            <h3 class="news-title lang-es">Comunicado de Prensa</h3>
-            <h3 class="news-title lang-en">Press Release</h3>
-            
-            <div class="news-excerpt">
-              <p class="lang-es">El presidente de la FICSH, Ab. David Tankamash, sostuvo un encuentro productivo con el gobernador William Gómez...</p>
-              <p class="lang-en">The president of the FICSH, Ab. David Tankamash, held a productive meeting with Governor William Gomez...</p>
-            </div>
-            
-            <div class="news-full">
-              <div class="lang-es">
-                <p>El presidente de la FICSH, Ab. David Tankamash, sostuvo un encuentro productivo con el gobernador William Gómez, donde se ratificó el apoyo institucional al Consejo de Gobierno Shuar. Durante la reunión, Tankamash reiteró el respaldo de la organización al presidente Noboa en la segunda vuelta electoral, y ambos líderes establecieron compromisos concretos para impulsar proyectos sociales y educativos que beneficien directamente a las comunidades Shuar.</p>
-              </div>
-              <div class="lang-en">
-                <p>The president of the FICSH, Ab. David Tankamash, held a productive meeting with Governor William Gomez, where the institutional support to the Shuar Governing Council was ratified. During the meeting, Tankamash reiterated the support of the organization to President Noboa in the second round of elections, and both leaders established concrete commitments to promote social and educational projects that directly benefit the Shuar communities.</p>
-              </div>
-            </div>
-            
-            <a href="#" class="read-more">
-              <span class="lang-es">Leer más</span>
-              <span class="lang-en">Read more</span>
-              <i class="fas fa-chevron-down"></i>
-            </a>
-            
-            <div class="word-count lang-es">48 palabras</div>
-            <div class="word-count lang-en">48 words</div>
-          </div>
-        </article>
-        
-        <!-- Más noticias con la misma estructura -->
-        
-      </div>
-      
-      <div class="pagination">
-        <a href="#" class="page-btn active">1</a>
-        <a href="#" class="page-btn">2</a>
+    </div>
+    
+    <!-- Paginación (mejorada) -->
+    <div class="magazine-pagination">
+      <a href="#" class="page-nav">
+        <i class="fas fa-chevron-left"></i>
+        <span class="lang-es">Anterior</span>
+        <span class="lang-en">Previous</span>
+      </a>
+      <div class="page-numbers">
+        <a href="#" class="page-btn">1</a>
+        <a href="#" class="page-btn active">2</a>
         <a href="#" class="page-btn">3</a>
         <span>...</span>
         <a href="#" class="page-btn">5</a>
       </div>
+      <a href="#" class="page-nav">
+        <span class="lang-es">Siguiente</span>
+        <span class="lang-en">Next</span>
+        <i class="fas fa-chevron-right"></i>
+      </a>
     </div>
+  </div>
   </section>
 
   <footer>
@@ -253,7 +288,8 @@
     </div>
   </footer>
 
- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ <script src="https
+ ://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/noticias.js"></script>
 
