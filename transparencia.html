@@ -146,24 +146,49 @@
         <span class="lang-en">How you can help</span>
       </h3>
       
-      <div class="reward-cards">
-        <!-- Ejemplo de tarjeta -->
-        <div class="reward-card">
-          <div class="reward-header">
-            <h4>
-              <span class="lang-es">Donación Básica</span>
-              <span class="lang-en">Basic Donation</span>
-            </h4>
-            <div class="reward-price">$25</div>
-          </div>
-          <ul class="reward-benefits">
-            <li><span class="lang-es">• Video de agradecimiento</span><span class="lang-en">• Thank you video</span></li>
-          </ul>
-          <button class="btn btn-donate">
-            <span class="lang-es">Donar ahora</span>
-            <span class="lang-en">Donate now</span>
-          </button>
+      <div class="rewards-section">
+        <h3>
+          <span class="lang-es">Cómo puedes ayudar</span>
+          <span class="lang-en">How you can help</span>
+        </h3>
+  
+        <div class="reward-cards">
+    <!-- Donación personalizada -->
+    <div class="reward-card">
+      <div class="reward-header">
+        <h4>
+          <span class="lang-es">Donación Personalizada</span>
+          <span class="lang-en">Custom Donation</span>
+        </h4>
+      </div>
+      
+      <!-- Campo para ingresar el monto -->
+      <div class="donation-amount">
+        <label for="customAmount" class="lang-es">Monto (USD):</label>
+        <label for="customAmount" class="lang-en">Amount (USD):</label>
+        <input type="number" 
+               id="customAmount" 
+               min="1" 
+               step="any"
+               placeholder="Ej: 50.00"
+               class="form-control">
+      </div>
+      
+      <ul class="reward-benefits">
+        <li>
+          <span class="lang-es">• Video de agradecimiento</span>
+          <span class="lang-en">• Thank you video</span>
+        </li>
+      </ul>
+      
+      <!-- Botón de donación (se activará mediante JavaScript) -->
+      <button class="btn btn-donate" id="customDonateBtn">
+        <span class="lang-es">Donar ahora</span>
+        <span class="lang-en">Donate now</span>
+      </button>
+    </div>
         </div>
+
       </div>
     </div>
 
@@ -174,10 +199,18 @@
         <span class="lang-en">Payment methods</span>
       </h4>
       <div class="methods-grid">
-        <form action="https://www.paypal.com/donate" method="post" target="_blank" class="payment-option">
-          <button type="submit" class="btn-paypal">
-            <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" alt="PayPal">
-          </button>
+        <!-- Formulario PayPal dinámico (oculto inicialmente) -->
+        <form id="paypalDonationForm" 
+          action="https://www.paypal.com/donate" 
+          method="post" 
+          target="_blank"
+          style="display:none">
+          <input type="hidden" name="business" value="emarita2@gmail.com">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="hidden" name="amount" id="paypalAmount" value="">
+          <!-- Personalización adicional -->
+          <input type="hidden" name="item_name" value="Donación Proyecto Educativo Shuar">
+          <input type="image" src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" border="0" name="submit" alt="PayPal">
         </form>
       </div>
     </div>
@@ -230,7 +263,7 @@
   </footer>
 
 
- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/nav.js"></script>
 
   <!-- Scripts al final para mejor rendimiento -->
@@ -333,6 +366,34 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(`Idioma cambiado a: ${lang}`);
   }
 });
+  </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const donateBtn = document.getElementById('customDonateBtn');
+    const amountInput = document.getElementById('customAmount');
+    const paypalForm = document.getElementById('paypalDonationForm');
+    const paypalAmount = document.getElementById('paypalAmount');
+
+    donateBtn.addEventListener('click', function() {
+      const amount = parseFloat(amountInput.value);
+      
+      if(isNaN(amount) || amount <= 0) {
+        alert(
+          document.querySelector('.lang-es') ? 
+          'Por favor ingresa un monto válido' : 
+          'Please enter a valid amount'
+        );
+        return;
+      }
+
+      // Actualiza el valor en el formulario PayPal
+      paypalAmount.value = amount.toFixed(2);
+      
+      // Envía el formulario
+      paypalForm.submit();
+    });
+  });
   </script>
 </body>
 </html>
